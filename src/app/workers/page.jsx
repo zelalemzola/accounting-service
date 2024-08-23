@@ -236,9 +236,10 @@ const Workers = () => {
      <div className="flex flex-wrap items-center gap-4 justify-center pb-4">
       <div className="flex items-center gap-2 flex-wrap">
         <span className="text-primary text-[18px] capitalize">{`${maid.name} requires`}</span>
-        <span className="ml-1">{`$${maid.pricePerMonth} per Month`}</span>
-        <span className="ml-1">{`$${maid.pricePerHour} per Hour`}</span>
-
+        <div className='flex flex-col md:flex-row gap-2'>
+        <span className="ml-1 p-1 text-sm bg-secondary rounded-full text-center">{`$${maid.pricePerMonth} per Month`}</span>
+        <span className="ml-1 p-1 text-sm bg-secondary rounded-full text-center">{`$${maid.pricePerHour} per Hour`}</span>
+        </div>
       </div>   
 
       <div className="flex items-center gap-2 flex-wrap">
