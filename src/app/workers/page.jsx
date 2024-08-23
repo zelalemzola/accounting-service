@@ -124,7 +124,7 @@ const Workers = () => {
     <div className="w-full mx-auto mt-[20px] flex flex-col ">
       <div className="w-full flex flex-wrap items-center justify-between fixed top-0 z-30 bg-white border-b rounded-b-2xl px-[10%] py-3 shadow-md">
       <Link href='/'><ArrowLeft fontWeight='bold' size={33} className="text-white bg-primary font-bold p-1 rounded-full md:scale-200 cursor-pointer" /></Link>
-        <p className="text-primary text-lg md:text-2xl font-bold flex items-center gap-6">Available Workers</p>
+        <p className="text-primary text-lg md:text-2xl font-bold flex items-center gap-6">Available Accountants</p>
         <Dialog className="flex-end">
           <DialogTrigger>
             <Button className="flex items-center gap-3 bg-primary hover:bg-primary">Filter <FilterIcon /></Button>
