@@ -11,43 +11,45 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
  const words = [
     {
       text: "Imagine",
-    className: "text-white text-xl md:text-4xl",
+    className: "text-white  md:text-4xl",
     },
     {
       text: "accounting",
-    className: "text-white text-xl md:text-4xl",
+    className: "text-white  md:text-4xl",
     },
     {
       text: "that",
-     className: "text-white text-xl md:text-4xl",
+     className: "text-white md:text-4xl",
     },
     {
       text: "works",
-       className: "text-white text-xl md:text-4xl",
+       className: "text-white md:text-4xl",
     },
     {
       text: "around",
-      className: "text-white text-xl md:text-4xl",
+      className: "text-white  md:text-4xl",
     },
    
     {
       text: "You.",
-      className: "text-secondary text-2xl md:text-4xl",
+      className: "text-secondary  md:text-4xl",
     },
   ];
 const HomePage = () => {
   return (
     <>
-    <div className="bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black h-screen w-full">
-
-      <div className='flex items-center justify-between px-6 py-3 fixed w-full bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black'>
+       <div className='flex items-center justify-between px-6 py-3 fixed  top-0 left-0 w-full bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black'>
         <Link href='/' className='text-white font-bold '>AA Accounting</Link>
         <HeroButton/>
       </div>
+    <div className="bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black h-screen w-full">
+
+
       
-       <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%]'>
-       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[30%] md:w-[10%] '/>
-    <TypewriterEffectSmooth words={words} />
+       <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%] w-full'>
+       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[40%] md:w-[20%] py-[5%] md:py-0 '/>
+      <TypewriterEffectSmooth words={words} />
+      jn
       <p className='text-wrap  mx-auto text-justify text-xs md:text-lg '>
        You&apos;re in control, We Just blend flexibility with expert care. 
       </p>
