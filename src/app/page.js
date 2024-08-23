@@ -1,98 +1,170 @@
-
-import { Button } from '@/components/ui/button';
+import HeroButton from '@/components/HeroButton'
 import Link from 'next/link'
 import React from 'react'
-import useSWR from 'swr';
-import './globals.css'
+
 import Image from 'next/image';
-import Profiles from '../../public/profiles.png';
-import Filter from '../../public/filter.png';
-import Detail from '../../public/det.png';
-import { MousePointerClick, Phone, Search } from 'lucide-react';
-import HeroButton from '@/components/HeroButton';
+import { CircleCheckBig } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 
-
-
-const Home = () => {
-  
+ const words = [
+    {
+      text: "Imagine",
+    className: "text-white",
+    },
+    {
+      text: "accounting",
+    className: "text-white",
+    },
+    {
+      text: "that",
+     className: "text-white",
+    },
+    {
+      text: "works",
+       className: "text-white",
+    },
+    {
+      text: "around",
+      className: "text-white",
+    },
+   
+    {
+      text: "You.",
+      className: "text-secondary",
+    },
+  ];
+const HomePage = () => {
   return (
-    <div className="relative  w-full">
-  {/* <div className='flex items-center justify-end gap-60 px-6 fixed top-0 border-b py-2 w-full text-primary text-lg font-semibold font-sans'>
-    <Link href='/workers'>Find Workers</Link>
-  </div> */}
-  <div className='md:h-screen md:w-full md:px-4 pt-[35%] pb-10 md:py-[10%] place-content-center'>
-   <div className='flex flex-col md:flex-row items-center   md:gap-5 justify-between px-10'>
-    <div className='flex flex-col items-start  gap-4 flex-2'>
-      <h1 className='text-4xl text-primary font-bold '>Find the Right Person to Aid You at Home</h1>
-      <p className='text-gray-500 text-lg'>Choose, Filter, and Hire Tailored to Your Needs</p>
-      <HeroButton/> 
-    </div>
-    <div className='scale-[60%] md:scale-[100%] flex flex-col items-center gap-4 px-[100px] md:px-20 rounded-full bg-secondary py-6 md:py-6 '>
-    <div className="flex  gap-4">
-      <Image src='/baby.svg' alt='taking care' width={100} height={100} />
-      <Image src='/clean.svg' alt='taking care' width={170} height={170}/>
+    <>
+    <div className="bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black h-screen w-full">
+
+      <div className='flex items-center justify-between px-6 py-3 fixed w-full bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black'>
+        <Link href='/' className='text-white font-bold '>AA Accounting</Link>
+        <HeroButton/>
       </div>
-      <Image src='/cooking.svg' alt='taking care' width={170} height={170}/>
-    </div>
-   </div>
-  </div>
-  <div className="md:h-screen md:w-full flex flex-col items-center gap-10 md:px-20 md:py-8 ">
-    <h1 className='text-primary text-4xl  font-extrabold'>Who We Are</h1>
-    <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20">
-    <p className='md:w-[60%] font-semibold text-lg md:text-2xl text-secondary'>We are dedicated to connect you with professional, trustworthy, and skilled Workers who understand your unique home requirements. With our easy-to-use platform, finding the right help has never been simpler.</p>
-    <Image src='/about.svg' alt='connect' width={370} height={370} className='scale-[60%] md:scale-[100%]  '/>
+      
+       <div className='flex flex-col items-center justify-center text-white pt-[15%]'>
+       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[10%]'/>
+    <TypewriterEffectSmooth words={words} />
+      <p className='text-wrap  mx-auto text-justify'>
+       You&apos;re in control, We Just blend flexibility with expert care. 
+      </p>
+       </div> 
+       
+
     </div>
 
-  </div>
+     <div className='bg-white h-screen w-full mt-[5%]'>
+        <div className='flex flex-col md:flex-row  w-full'>
+        <div className='w-1/2 px-8 '>
+      <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>
+      <p className='p-3 rounded-2xl border border-secondary shadow-md'>Welcome to [Your Company Name], where traditional accounting meets modern flexibility. We do more than crunch numbers—we create opportunities. Whether you&apos;re looking for expert accounting services or trained gig workers who can step in on demand, we&apos;ve built a model that adapts to your needs. Our mission is to make high-quality financial management accessible, efficient, and perfectly suited to your business.</p>
+      </div>
+      <div className='w-1/2 px-5'>
+       <h1 className='text-primary text-xl font-bold pb-9'>Our Unique Approach</h1>
+       <div className='flex items-start flex-col gap-4'>
+        <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md">
+            <h2 className="text-secondary text-lg font-bold">Accounting Excellence</h2>
+            <p className='text-sm'>
+                Our team of seasoned accountants delivers precise, reliable financial services, tailored to your business. From bookkeeping to tax planning, we ensure your finances are always in check.
+            </p>
+        </div>
 
-  <div className='md:h-screen md:w-full '>
-    <h1  className='text-4xl text-primary font-bold text-center py-5 lg:py-10'>How It Works</h1>
-    <div className="flex flex-col md:flex-row items-center  gap-20 justify-center w-full md:px-10  py-5 lg:py-10">
-      <div className="flex flex-col  items-center justify-center gap-5 md:w-1/2">
-      <p className='text-2xl text-secondary font-bold'>Browse Among Profiles</p>
-      <p className='text-lg text-gray-500 text-center'>Discover thousands of skilled professionals, which have gone under serious background review by our company</p>
-      </div>
-      <Image src={Profiles} alt='how' className='w-[90%] md:w-1/2  object-contain'/>
-    </div>
-  </div>
+        <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md">
+            <h2 className="text-secondary text-lg font-bold">Gig Worker Marketplace:</h2>
+            <p className='text-sm'>
+               Need short-term help without long-term commitment? We’ve trained a network of gig workers ready to assist with everything from day-to-day bookkeeping to specialized financial projects. Hire them by the hour or for a contract term, with the peace of mind that comes from knowing they’ve been trained by the best.
+            </p>
+        </div>
 
-  <div className='md:h-screen md:w-full '>
-    <div className="flex flex-col md:flex-row-reverse items-center  gap-20 justify-center w-full md:px-10 pt-20 ">
-      <div className="flex flex-col items-center justify-center gap-5 md:w-1/2">
-      <p className='text-2xl text-secondary font-bold'>Filter Workers</p>
-      <p className='text-lg text-gray-500 text-center'>Customize your feed by Filtering Workers by their working category, and price </p>
+        <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md">
+            <h2 className="text-secondary text-lg font-bold">Commission-Based Model:</h2>
+            <p className='text-sm'>
+               You only pay for what you need. When you hire our gig workers, you pay them directly, and we take a small commission. It&apos;s a win-win that keeps your costs transparent and predictable.
+            </p>
+        </div>
+
+        </div>
       </div>
-      <Image src={Filter} alt='how' className='w-[90%] md:w-1/2 object-contain rounded-2xl'/>
-    </div>
-  </div>
-  
-  <div className='md:h-screen md:w-full py-20 lg:py-0'>
-    <div className="flex flex-col md:flex-row items-center  gap-20 justify-center w-full md:px-10 pt-20 ">
-      <div className="flex flex-col items-center justify-center gap-5 md:w-[40%]">
-      <p className='text-2xl text-secondary font-bold'>Hire With Confidence</p>
-      <p className='text-lg text-gray-500 text-center'>After choosing the right worker for you. Get full detail about the worker and even read reviews the worker has from other clients. </p>
       </div>
-      <Image src={Detail} alt='how' className='w-[70%] md:w-[60%] object-contain '/>
-    </div>
-  </div>
-  <div className='md:h-[50%] md:w-full bg-secondary py-10 px-3 lg:px-10'>
-    <div className="flex flex-col gap-8 md:gap-0 md:flex-row md:justify-between">
-      <div className="flex flex-col gap-6 lg:gap-4 items-center md:w-1/2">
-   <h1 className='text-white text-2xl md:text-3xl font-extrabold mx-auto'>What Makes Us A Better Choice</h1>
-   <p className='text-white text-md text-center'>We believe in empowering individuals to find the best solutions for their home needs.Even after offering multiple Proffessionals in one platform where clients can filter and choose after Hiring a worker client will be provided with a full background of the worker in a document format which will provide more safety for the client and also gain more knowledge about the Worker</p>
-   </div>
-      <div className="flex flex-col  items-center gap-4 lg:gap-8 md:w-1/2">
-   <h1 className='text-white text-3xl font-extrabold text-center'>Give Us Call</h1>
-      <Button className='bg-[#a88905] px-5 p-3 text-xl font-bold gap-4'><Phone/> 9080</Button>
-   </div>
-   </div>
-  </div>
-   <div className='bg-secondary hover:bg-secondary p-2 px-2 text-white text-md font-bold w-fit fixed top-0 right-0 mt-[10%] rounded-l-full animate-bounce shadow-lg'>
-    <Link href='/workers' className='flex items-center gap-2 bg-secondary '><Search color='white'  size={22} /> Search Workers</Link>
-   </div>
-  </div>
+     </div>
+     <div className='bg-white py-20 w-full mt-[5%]'>
+        <div className='flex flex-col md:flex-row items-center w-full'>
+            <div className='flex items-center flex-col gap-6 w-1/2 px-5'>
+              <Image src='/standout.svg' width={100} height={100} className="w-[50%]"/>
+              <h2 className="text-secondary text-4xl font-bold">Why We Stand Out</h2>
+            </div>
+            <div className='w-1/2 px-5'>
+
+            <div className="flex flex-col gap-1 p-3  shadow-md">
+               <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig /> Tailored Solutions</h2>
+               <p className='text-sm'>
+                  Every business is different. That’s why we offer both full-service accounting and the ability to hire trained gig workers who fit your exact needs.
+               </p>
+            </div>
+
+            <div className="flex flex-col gap-1 p-3  shadow-md">
+               <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig />Agility Meets Expertise:</h2>
+               <p className='text-sm'>
+                Whether you need a quick fix or ongoing support, our flexible model ensures you get the right help at the right time—without the overhead of a traditional firm.
+               </p>
+            </div>
+
+            <div className="flex flex-col gap-1 p-3  shadow-md">
+               <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig />Empowering Talent: </h2>
+               <p className='text-sm'>
+               We’re not just a company—we’re a community. By training gig workers, we empower them with skills and opportunities, while providing you with access to a flexible, highly skilled workforce.
+               </p>
+            </div>
+
+
+            </div>
+
+        </div>
+     </div>
+     <div className=" w-full mt-[5%] h-screen">
+        <h2 className='text-3xl font-bold text-primary text-center py-5 pb-10'>How It Works</h2>
+        <div className='flex flex-col  items-center gap-4 '>
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] -ml-[20%]">
+            <h2 className="text-secondary text-lg font-bold">Assess Your Needs:</h2>
+            <p className='text-sm'>
+               Tell us what you need—whether it&apos;s full-service accounting or gig workers for specific tasks.
+            </p>
+        </div>
+
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] ">
+            <h2 className="text-secondary text-lg font-bold">Get Matched:</h2>
+            <p className='text-sm'>
+             We’ll connect you with the right professionals—our in-house team or our trained gig workers.
+            </p>
+        </div>
+
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] ml-[20%]">
+            <h2 className="text-secondary text-lg font-bold">Flexible Engagement:</h2>
+            <p className='text-sm'>
+             Hire for a project, a few hours, or on a contract basis—whatever suits your business best.
+            </p>
+        </div>
+
+        </div>
+     </div>
+     <div className='w-full px-8 flex flex-col gap-4 py-4 bg-secondary'>
+        <h2 className='text-primary text-2xl font-bold'>Join Us</h2>
+        <div className='flex items-center flex-col md:flex-row'>
+        <p className='text-black w-[70%]'>
+            Why settle for less when you can have accounting that adapts to your needs? At [Your Company Name], we&apos;re redefining what it means to manage your finances. Whether you&apos;re a small business or a growing enterprise, we&apos;re here to support your success.
+        </p>
+        <Button className='rounded-md bg-primary hover:bg-primary hover:shadow-lg text-white shadow-md mx-auto ' asChild>
+      <Link href='/workers' className='py-6 px-6'>
+        Find Gig Workers
+          </Link>
+        </Button>
+        </div>
+     </div>
+     </>
   )
 }
 
-export default Home;
+export default HomePage

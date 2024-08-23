@@ -51,9 +51,9 @@ const HeroButton = () => {
   }, [maidsData, selectedCategory, selectedPriceRange, filterMaids]);
 
   return (
-     <Button className='rounded-full bg-secondary hover:bg-primary animate-bounce shadow-md' asChild>
+     <Button className='rounded-md bg-secondary hover:bg-secondary hover:shadow-lg text-black shadow-md' asChild>
       <Link href='/workers'>
-        Search Workers
+         Find Gig Workers
           </Link>
         </Button>
   )

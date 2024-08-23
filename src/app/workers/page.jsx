@@ -46,7 +46,8 @@ const Workers = () => {
 
   const [filteredMaids, setFilteredMaids] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedPriceRange, setSelectedPriceRange] = useState([0, 100000]); // Default max price is 100,000
+  const [selectedPriceMonthRange, setSelectedPriceMonthRange] = useState([0, 100000]); // Default max price is 100,000
+  const [selectedPriceHourRange, setSelectedPriceHourRange] = useState([0, 200]); // Default max price is 200
   const [newReview, setNewReview] = useState("");
   const [reviews, setReviews] = useState([]);
   const handleReviewSubmit = async (id) => {
@@ -72,22 +73,34 @@ const Workers = () => {
       filtered = filtered.filter((maid) => maid.category._id === selectedCategory);
     }
     filtered = filtered.filter(
-      (maid) => maid.pricePerMonth >= selectedPriceRange[0] && maid.pricePerMonth <= selectedPriceRange[1]
+      (maid) => maid.pricePerMonth >= selectedPriceMonthRange[0] && maid.pricePerMonth <= selectedPriceMonthRange[1] &&  maid.pricePerHour >= selectedPriceHourRange[0] && maid.pricePerHour <= selectedPriceHourRange[1]
     );
     setFilteredMaids(filtered);
-  }, [maidsData, selectedCategory, selectedPriceRange]);
+  }, [maidsData, selectedCategory, selectedPriceMonthRange,selectedPriceHourRange]);
 
   useEffect(() => {
     filterMaids();
-  }, [maidsData, selectedCategory, selectedPriceRange, filterMaids]);
+  }, [maidsData, selectedCategory, selectedPriceHourRange,selectedPriceMonthRange, filterMaids]);
 
   const handleSelect = (event) => {
     setSelectedCategory(event.target.value);
   };
 
-  const handlePriceRangeChange = (event) => {
+  const handlePriceRangeMonthChange = (event) => {
     const { name, value } = event.target;
-    setSelectedPriceRange((prevRange) => {
+    setSelectedPriceMonthRange((prevRange) => {
+      const newRange = [...prevRange];
+      if (name === "min") {
+        newRange[0] = value;
+      } else {
+        newRange[1] = value;
+      }
+      return newRange;
+    });
+  };
+  const handlePriceRangeHourChange = (event) => {
+    const { name, value } = event.target;
+    setSelectedPriceHourRange((prevRange) => {
       const newRange = [...prevRange];
       if (name === "min") {
         newRange[0] = value;
@@ -100,7 +113,8 @@ const Workers = () => {
 
   const clearFilters = () => {
     setSelectedCategory("");
-    setSelectedPriceRange([0, 100000]); // Reset to default max price
+    setSelectedPriceMonthRange([0, 100000]); // Reset to default max price
+    setSelectedPriceHourRange([0, 200]); // Reset to default max price
   };
 
   // if (maidsError || categoriesError) return <div>Failed to load data</div>;
@@ -138,16 +152,36 @@ const Workers = () => {
                   <input
                     type="number"
                     name="min"
-                    value={selectedPriceRange[0]}
-                    onChange={handlePriceRangeChange}
+                    value={selectedPriceMonthRange[0]}
+                    onChange={handlePriceRangeMonthChange}
                     className="border p-1 rounded text-black w-fit"
                   />
                   <p className="text-center font-bold">-</p>
                   <input
                     type="number"
                     name="max"
-                    value={selectedPriceRange[1]}
-                    onChange={handlePriceRangeChange}
+                    value={selectedPriceMonthRange[1]}
+                    onChange={handlePriceRangeMonthChange}
+                    className="border p-1 rounded text-black"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col  gap-3 py-2 ">
+                <label className="text-black">Filter by Price/Hour:</label>
+                <div className="flex items-center space-x-2 flex-col md:flex-row  gap-y-2">
+                  <input
+                    type="number"
+                    name="min"
+                    value={selectedPriceHourRange[0]}
+                    onChange={handlePriceRangeHourChange}
+                    className="border p-1 rounded text-black w-fit"
+                  />
+                  <p className="text-center font-bold">-</p>
+                  <input
+                    type="number"
+                    name="max"
+                    value={selectedPriceHourRange[1]}
+                    onChange={handlePriceRangeHourChange}
                     className="border p-1 rounded text-black"
                   />
                 </div>
