@@ -11,28 +11,28 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
  const words = [
     {
       text: "Imagine",
-    className: "text-white",
+    className: "text-white text-xl md:text-4xl",
     },
     {
       text: "accounting",
-    className: "text-white",
+    className: "text-white text-xl md:text-4xl",
     },
     {
       text: "that",
-     className: "text-white",
+     className: "text-white text-xl md:text-4xl",
     },
     {
       text: "works",
-       className: "text-white",
+       className: "text-white text-xl md:text-4xl",
     },
     {
       text: "around",
-      className: "text-white",
+      className: "text-white text-xl md:text-4xl",
     },
    
     {
       text: "You.",
-      className: "text-secondary",
+      className: "text-secondary text-2xl md:text-4xl",
     },
   ];
 const HomePage = () => {
@@ -45,10 +45,10 @@ const HomePage = () => {
         <HeroButton/>
       </div>
       
-       <div className='flex flex-col items-center justify-center text-white pt-[15%]'>
-       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[10%]'/>
+       <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%]'>
+       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto md:w-[10%]'/>
     <TypewriterEffectSmooth words={words} />
-      <p className='text-wrap  mx-auto text-justify'>
+      <p className='text-wrap  mx-auto text-justify text-xs md:text-lg '>
        You&apos;re in control, We Just blend flexibility with expert care. 
       </p>
        </div> 
@@ -56,14 +56,14 @@ const HomePage = () => {
 
     </div>
 
-     <div className='bg-white h-screen w-full mt-[5%]'>
+     <div className='bg-white md:h-screen w-full mt-[5%]'>
         <div className='flex flex-col md:flex-row  w-full'>
-        <div className='w-1/2 px-8 '>
+        <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>
       <p className='p-3 rounded-2xl border border-secondary shadow-md'>Welcome to [Your Company Name], where traditional accounting meets modern flexibility. We do more than crunch numbers—we create opportunities. Whether you&apos;re looking for expert accounting services or trained gig workers who can step in on demand, we&apos;ve built a model that adapts to your needs. Our mission is to make high-quality financial management accessible, efficient, and perfectly suited to your business.</p>
       </div>
-      <div className='w-1/2 px-5'>
-       <h1 className='text-primary text-xl font-bold pb-9'>Our Unique Approach</h1>
+      <div className='md:w-1/2 px-5'>
+       <h1 className='text-primary text-xl font-bold pb-9 pt-3'>Our Unique Approach</h1>
        <div className='flex items-start flex-col gap-4'>
         <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md">
             <h2 className="text-secondary text-lg font-bold">Accounting Excellence</h2>
@@ -92,11 +92,11 @@ const HomePage = () => {
      </div>
      <div className='bg-white py-20 w-full mt-[5%]'>
         <div className='flex flex-col md:flex-row items-center w-full'>
-            <div className='flex items-center flex-col gap-6 w-1/2 px-5'>
+            <div className='flex items-center flex-col gap-6 md:w-1/2 px-5'>
               <Image src='/standout.svg' width={100} height={100} className="w-[50%]"/>
               <h2 className="text-secondary text-4xl font-bold">Why We Stand Out</h2>
             </div>
-            <div className='w-1/2 px-5'>
+            <div className='md:w-1/2 px-5'>
 
             <div className="flex flex-col gap-1 p-3  shadow-md">
                <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig /> Tailored Solutions</h2>
