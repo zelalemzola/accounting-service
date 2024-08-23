@@ -32,7 +32,7 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
    
     {
       text: "You.",
-      className: "text-secondary  md:text-4xl",
+      className: "text-secondary text-lg  md:text-4xl",
     },
   ];
 const HomePage = () => {
