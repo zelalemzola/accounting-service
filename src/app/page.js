@@ -46,7 +46,7 @@ const HomePage = () => {
       </div>
       
        <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%]'>
-       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto md:w-[10%]'/>
+       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[30%] md:w-[10%] '/>
     <TypewriterEffectSmooth words={words} />
       <p className='text-wrap  mx-auto text-justify text-xs md:text-lg '>
        You&apos;re in control, We Just blend flexibility with expert care. 
