@@ -11,23 +11,23 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
  const words = [
     {
       text: "Imagine",
-    className: "text-white  md:text-4xl",
+    className: "text-white text-lg md:text-4xl",
     },
     {
       text: "accounting",
-    className: "text-white  md:text-4xl",
+    className: "text-white text-lg  md:text-4xl",
     },
     {
       text: "that",
-     className: "text-white md:text-4xl",
+     className: "text-white text-lg md:text-4xl",
     },
     {
       text: "works",
-       className: "text-white md:text-4xl",
+       className: "text-white text-lg md:text-4xl",
     },
     {
       text: "around",
-      className: "text-white  md:text-4xl",
+      className: "text-white text-lg  md:text-4xl",
     },
    
     {
@@ -49,7 +49,7 @@ const HomePage = () => {
        <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%] w-full'>
        <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[40%] md:w-[20%] py-[5%] md:py-0 '/>
       <TypewriterEffectSmooth words={words} />
-      jn
+    
       <p className='text-wrap  mx-auto text-justify text-xs md:text-lg '>
        You&apos;re in control, We Just blend flexibility with expert care. 
       </p>
