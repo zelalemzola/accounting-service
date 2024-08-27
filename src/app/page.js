@@ -3,47 +3,45 @@ import Link from 'next/link'
 import React from 'react'
 
 import Image from 'next/image';
-import { CircleCheckBig } from 'lucide-react';
+import { CircleCheckBig, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
+import Partners from '@/components/Partners';
 
 
  const words = [
     {
       text: "Imagine",
-    className: "text-white text-lg md:text-4xl",
+    className: "text-black text-lg md:text-4xl",
     },
     {
-      text: "accounting",
-    className: "text-white text-lg  md:text-4xl",
+      text: "Accounting",
+    className: "text-secondary text-lg  md:text-4xl",
     },
+    
     {
-      text: "that",
-     className: "text-white text-lg md:text-4xl",
-    },
-    {
-      text: "works",
-       className: "text-white text-lg md:text-4xl",
+      text: "working",
+       className: "text-black text-lg md:text-4xl",
     },
     {
       text: "around",
-      className: "text-white text-lg  md:text-4xl",
+      className: "text-black text-lg  md:text-4xl",
     },
-   
+
     {
       text: "You.",
-      className: "text-secondary text-lg  md:text-4xl",
+      className: "text-secondary text-lg  md:text-4xl"
     },
   ];
 const HomePage = () => {
   return (
     <>
-       <div className='flex items-center justify-between px-6 py-3 fixed  top-0 left-0 w-full bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black'>
-        <Link href='/' className='text-white font-bold '>AA Accounting</Link>
+       <div className='flex items-center justify-between px-6 py-3 fixed  top-0 left-0 w-full'>
+        <Link href='/' className='text-secondary font-bold '>AA Accounting</Link>
         <HeroButton/>
       </div>
-    <div className="bg-[rgb(1,10,23)] bg-gradient-to-r from-[rgba(1,10,23,1)] via-[rgba(9,29,71,1)] via-[rgba(9,109,121,1)] to-black h-screen w-full">
-
+    <div className="md:h-screen w-full flex items-center justify-center pt-[40%] pb-[20%]  md:py-0">
+{/* 
 
       
        <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%] w-full'>
@@ -54,10 +52,30 @@ const HomePage = () => {
        You&apos;re in control, We Just blend flexibility with expert care. 
       </p>
        </div> 
-       
+        */}
+   <div className='flex items-center flex-col md:flex-row w-full'>
+    <div className='w-full md:w-1/2 flex items-center justify-center px-10 md:px-4 '>
+    <div className='flex flex-col items-start gap-3 pt-[20%]'>
+    <h1 className='text-2xl md:text-3xl text-[#4d4d4d] font-extrabold'>
+      Imagine <span className='text-secondary'>Accounting</span> Working Around <span className='text-secondary'>You</span>
+    </h1>
+    <p className='text-wrap  text-justify text-xs md:text-lg text-gray-600 '>
+       You&apos;re in control, We Just blend flexibility with expert care. 
+      </p>
+    <div className='flex items-center gap-3'>
 
+    <p className='font-bold text-[#4d4d4d]'>Get Started:</p>
+    <Button className='bg-secondary font-bold text-lg flex items-center gap-2 py-3 hover:bg-secondary hover:shadow-lg'><Phone/>9080</Button>
+    </div>
     </div>
 
+    </div>
+    <div className='hidden w-full md:w-1/2 md:flex items-center justify-center '>
+    <Image src='/ac2.png' alt='' width={400} height={400} className='rounded-full w-[400px] h-[400px] border-4 shadow-lg '/>
+    </div>
+   </div>
+    </div>
+    <Partners/>
      <div className='bg-white md:h-screen w-full mt-[5%]'>
         <div className='flex flex-col md:flex-row  w-full'>
         <div className='md:w-1/2 px-8 '>
