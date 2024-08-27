@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import Image from 'next/image';
-import { CircleCheckBig, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import { CircleArrowOutUpRight, CircleCheckBig, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Partners from '@/components/Partners';
@@ -52,11 +52,12 @@ const HomePage = () => {
       <h1 className='text-4xl md:text-5xl text-[#4d4d4d] font-extrabold'>Imagine <span className='text-secondary'>Accounting </span></h1>
       <h1 className='text-3xl md:text-4xl text-primary font-extrabold'>Working Around <span className='text-secondary'>You</span></h1>
       </div>
-      <div className='bg-[#c1ff72] px-3 py-2 rounded-xl text-lg'>&lsquo;&lsquo;Grow Your Business&rsquo;&rsquo;</div>
-       <Button className='rounded-2xl bg-secondary hover:bg-secondary shadow-md hover:shadow-lg text-white text-lg p-3' asChild>
+      <div className='bg-[#c1ff72] px-3 py-1 rounded-xl text-lg'>&lsquo;&lsquo;Grow Your Business&rsquo;&rsquo;</div>
+       <Button className='rounded-2xl bg-secondary hover:bg-primary shadow-md hover:shadow-lg text-white text-lg p-3 gap-2' >
       <Link href='/workers'>
          Find Gig Workers
           </Link>
+          <CircleArrowOutUpRight />
         </Button>
     </div>
     </div>
