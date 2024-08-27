@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import Image from 'next/image';
-import { CircleCheckBig, Phone } from 'lucide-react';
+import { CircleCheckBig, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Partners from '@/components/Partners';
@@ -36,32 +36,38 @@ import Partners from '@/components/Partners';
 const HomePage = () => {
   return (
     <>
-       <div className='flex items-center justify-between px-6 py-3 fixed  top-0 left-0 w-full'>
+       <div className='flex items-center justify-between px-6 md:px-20 py-3 fixed  top-0 left-0 w-full'>
         <Link href='/' className='text-secondary font-bold '>AA Accounting</Link>
         <HeroButton/>
       </div>
-    <div className="md:h-screen w-full flex items-center justify-center pt-[40%] pb-[20%]  md:py-0">
-{/* 
+    {/* <div className='hidden md:h-screen md:w-full landing'>
+      <p>bhhbbhbhbuuh</p>
+    </div> */}
 
-      
-       <div className='flex flex-col items-center justify-center text-white pt-[35%] md:pt-[15%] w-full'>
-       <Image src='/collaboration.svg' alt='' width={100} height={100} className='mx-auto w-[40%] md:w-[20%] py-[5%] md:py-0 '/>
-      <TypewriterEffectSmooth words={words} />
-    
-      <p className='text-wrap  mx-auto text-justify text-xs md:text-lg '>
-       You&apos;re in control, We Just blend flexibility with expert care. 
-      </p>
-       </div> 
-        */}
+    <div className="h-screen w-full flex items-center justify-center pt-[40%] pb-[20%]  md:py-0 landing">
    <div className='flex items-center flex-col md:flex-row w-full'>
-    <div className='w-full md:w-1/2 flex items-center justify-center px-10 md:px-4 '>
+    <div className='w-full md:w-1/2 flex items-center justify-center pl-5 md:pl-20  md:px-4'>
+    <div className="flex flex-col items-start justify-center gap-4 -mt-[30%] md:mt-0">
+      <div className='flex flex-col  gap-2'>
+      <h1 className='text-4xl md:text-5xl text-[#4d4d4d] font-extrabold'>Imagine <span className='text-secondary'>Accounting </span></h1>
+      <h1 className='text-3xl md:text-4xl text-primary font-extrabold'>Working Around <span className='text-secondary'>You</span></h1>
+      </div>
+      <div className='bg-[#c1ff72] px-3 py-2 rounded-xl text-lg'>&lsquo;&lsquo;Grow Your Business&rsquo;&rsquo;</div>
+       <Button className='rounded-2xl bg-secondary hover:bg-secondary shadow-md hover:shadow-lg text-white text-lg p-3' asChild>
+      <Link href='/workers'>
+         Find Gig Workers
+          </Link>
+        </Button>
+    </div>
+    </div>
+    {/* <div className='w-full md:w-1/2 flex items-center justify-center px-10 md:px-4 '>
     <div className='flex flex-col items-start gap-3 pt-[20%]'>
     <h1 className='text-2xl md:text-3xl text-[#4d4d4d] font-extrabold'>
       Imagine <span className='text-secondary'>Accounting</span> Working Around <span className='text-secondary'>You</span>
     </h1>
     <p className='text-wrap  text-justify text-xs md:text-lg text-gray-600 '>
        You&apos;re in control, We Just blend flexibility with expert care. 
-      </p>
+   </p>
     <div className='flex items-center gap-3'>
 
     <p className='font-bold text-[#4d4d4d]'>Get Started:</p>
@@ -69,9 +75,10 @@ const HomePage = () => {
     </div>
     </div>
 
-    </div>
+    </div> */}
+
     <div className='hidden w-full md:w-1/2 md:flex items-center justify-center '>
-    <Image src='/ac2.png' alt='' width={400} height={400} className='rounded-full w-[400px] h-[400px] border-4 shadow-lg '/>
+    {/* <Image src='/ac2.png' alt='' width={400} height={400} className='rounded-full w-[400px] h-[400px] border-4 shadow-lg '/> */}
     </div>
    </div>
     </div>
@@ -182,6 +189,17 @@ const HomePage = () => {
         Find Gig Workers
           </Link>
         </Button>
+        </div>
+        <div className='w-full  shadow-md border-2 border-secondary '></div>
+        <div className='flex flex-col gap-4'>
+        <h2 className='text-primary text-2xl font-bold'>AA Acounting</h2>
+        <div className='flex gap-4 md:gap-8 flex-wrap text-2xl text-white'>
+          <div className='p-2 bg-primary rounded-full'><Instagram size={32} /></div>
+          <div className='p-2 bg-primary rounded-full'><Facebook  size={32}/></div>
+          <div className='p-2 bg-primary rounded-full'><Linkedin size={32}/></div>
+          <div className='p-2 bg-primary rounded-full'><Twitter size={32}/></div>
+          <div className='p-2 bg-primary rounded-full'><Mail size={32}/></div>
+        </div>
         </div>
      </div>
      </>

@@ -67,3 +67,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.landing{
+  background-image: url('/landing.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
