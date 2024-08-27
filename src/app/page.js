@@ -147,22 +147,22 @@ const HomePage = () => {
      <div className=" w-full mt-[5%] h-screen">
         <h2 className='text-3xl font-bold text-primary text-center py-5 pb-10'>How It Works</h2>
         <div className='flex flex-col  items-center gap-4 '>
-          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] -ml-[20%]">
-            <h2 className="text-secondary text-lg font-bold">Assess Your Needs:</h2>
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%] -ml-[20%]">
+            <h2 className="text-secondary text-lg font-bold"><span className='text-xl font-extrabold'>1</span>Assess Your Needs:</h2>
             <p className='text-sm'>
                Tell us what you need—whether it&apos;s full-service accounting or gig workers for specific tasks.
             </p>
         </div>
 
-          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] ">
-            <h2 className="text-secondary text-lg font-bold">Get Matched:</h2>
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%] ">
+            <h2 className="text-secondary text-lg font-bold"><span className='text-xl font-extrabold'>2</span>Get Matched:</h2>
             <p className='text-sm'>
              We’ll connect you with the right professionals—our in-house team or our trained gig workers.
             </p>
         </div>
 
-          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[50%] ml-[20%]">
-            <h2 className="text-secondary text-lg font-bold">Flexible Engagement:</h2>
+          <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%]] ml-[20%]">
+            <h2 className="text-secondary text-lg font-bold"><span className='text-xl font-extrabold'>3</span>Flexible Engagement:</h2>
             <p className='text-sm'>
              Hire for a project, a few hours, or on a contract basis—whatever suits your business best.
             </p>
@@ -170,13 +170,14 @@ const HomePage = () => {
 
         </div>
      </div>
-     <div className='w-full px-8 flex flex-col gap-4 py-4 bg-secondary'>
-        <h2 className='text-primary text-2xl font-bold'>Join Us</h2>
+     <div className='w-full  flex flex-col gap-4 py-4  px-8'>
+        <div className='w-full  shadow-md border-2 border-secondary '></div>
+        <h2 className='text-secondary text-2xl font-bold'>Join Us</h2>
         <div className='flex items-center flex-col md:flex-row'>
-        <p className='text-black w-[70%]'>
+        <p className='text-[#4d4d4d] w-[70%]'>
             Why settle for less when you can have accounting that adapts to your needs? At [Your Company Name], we&apos;re redefining what it means to manage your finances. Whether you&apos;re a small business or a growing enterprise, we&apos;re here to support your success.
         </p>
-        <Button className='rounded-md bg-primary hover:bg-primary hover:shadow-lg text-white shadow-md mx-auto ' asChild>
+        <Button className='rounded-md bg-secondary hover:bg-secondary hover:shadow-lg text-white shadow-md mx-auto ' asChild>
       <Link href='/workers' className='py-6 px-6'>
         Find Gig Workers
           </Link>
