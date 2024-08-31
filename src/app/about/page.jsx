@@ -38,7 +38,7 @@ const Aboutpage = () => {
       </div>
      
       </div>
-    <div className='bg-white h-screen w-full mt-[5%] py-20' id='about'>
+    <div className='bg-white h-screen w-full mt-[5%] pb-20' id='about'>
         <div className='flex flex-col md:flex-row  w-full'>
         <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>

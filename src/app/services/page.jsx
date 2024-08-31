@@ -38,7 +38,7 @@ const ServicePage = () => {
       </div>
      
       </div>
-     <div className=" w-full mt-[5%] md:h-screen py-20" id='service'>
+     <div className=" w-full mt-[5%] md:h-screen pb-20" id='service'>
         <h2 className='text-3xl font-bold text-primary text-center py-5 pb-10'>How It Works</h2>
         <div className='flex flex-col  items-center gap-4 '>
           <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%] -ml-[20%]">
