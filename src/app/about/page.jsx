@@ -28,9 +28,9 @@ const Aboutpage = () => {
             <Link href='/services'className='hover:bg-secondary hover:text-white font-bold p-2 w-full text-center rounded-xl'>Services</Link>
             <HeroButton/> 
             </div>
-            <DrawerFooter>
+            <DrawerFooter className='px-6'>
               <DrawerClose>
-                <Button variant="destructive">Close</Button>
+              <Button variant="outline" className='w-full'>Close</Button>
               </DrawerClose>
             </DrawerFooter>
           </DrawerContent>
