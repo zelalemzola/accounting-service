@@ -38,8 +38,8 @@ const Aboutpage = () => {
       </div>
      
       </div>
-    <div className='bg-white h-screen w-full mt-[5%] pb-20' id='about'>
-        <div className='flex flex-col md:flex-row  w-full'>
+    <div className='bg-white h-screen w-full mt-[5%] py-20' id='about'>
+        <div className='flex flex-col md:flex-row  w-full pb-10'>
         <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>
       <p className='p-3 rounded-2xl border border-secondary shadow-md'>Welcome to [Your Company Name], where traditional accounting meets modern flexibility. We do more than crunch numbers—we create opportunities. Whether you&apos;re looking for expert accounting services or trained gig workers who can step in on demand, we&apos;ve built a model that adapts to your needs. Our mission is to make high-quality financial management accessible, efficient, and perfectly suited to your business.</p>
