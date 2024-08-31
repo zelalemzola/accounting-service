@@ -60,7 +60,7 @@ const HomePage = () => {
             </div>
             <DrawerFooter>
               <DrawerClose>
-                <Button variant="outline">Cancel</Button>
+              <Button variant="destructive">Close</Button>
               </DrawerClose>
             </DrawerFooter>
           </DrawerContent>
