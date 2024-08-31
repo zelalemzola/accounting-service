@@ -3,11 +3,13 @@ import Link from 'next/link'
 import React from 'react'
 
 import Image from 'next/image';
-import { CircleArrowOutUpRight, CircleCheckBig, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import { CircleArrowOutUpRight, CircleCheckBig, Facebook, Instagram, Linkedin, Mail, Menu, Phone, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Partners from '@/components/Partners';
-
+import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTrigger } from '@/components/ui/drawer';
+   
+  
 
  const words = [
     {
@@ -36,15 +38,43 @@ import Partners from '@/components/Partners';
 const HomePage = () => {
   return (
     <>
-       <div className='flex items-center justify-between px-6 md:px-20 py-3 fixed  top-0 left-0 w-full'>
+       <div className='flex items-center justify-between px-6 md:px-10 py-3 fixed  top-0 left-0 w-full bg-white rounded-b-2xl'>
         <Link href='/' className='text-secondary font-bold '>AA Accounting</Link>
-        <HeroButton/>
+        <div className=' hidden md:flex flex-row items-center gap-6 '>
+            <Link href='/'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>Home</Link>
+            <Link href='/about'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>About us</Link>
+            <Link href='/services'className='hover:bg-secondary hover:text-white p-2 rounded-xl  font-bold'>Services</Link>
+            <HeroButton/> 
+        </div>
+        <div className='block md:hidden'>
+                <Drawer>
+          <DrawerTrigger>
+            <Menu/>
+          </DrawerTrigger>
+          <DrawerContent className='h-[40%]'>
+            <div className=' flex   gap-4 flex-col px-6'>
+            <Link href='/'  className='hover:bg-secondary hover:text-white font-bold p-2 w-full text-center rounded-xl'>Home</Link>
+            <Link href='/about'  className='hover:bg-secondary hover:text-white font-bold p-2 w-full text-center rounded-xl'>About us</Link>
+            <Link href='/services'className='hover:bg-secondary hover:text-white font-bold p-2 w-full text-center rounded-xl'>Services</Link>
+            <HeroButton/> 
+            </div>
+            <DrawerFooter>
+              <DrawerClose>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </div>
+     
       </div>
     {/* <div className='hidden md:h-screen md:w-full landing'>
-      <p>bhhbbhbhbuuh</p>
+     
     </div> */}
 
-    <div className="h-screen w-full flex items-center justify-center pt-[40%] pb-[20%]  md:py-0 landing">
+    <div
+     
+     className="h-screen w-full flex items-center justify-center pt-[40%] pb-[20%]  md:py-0 landing">
    <div className='flex items-center flex-col md:flex-row w-full'>
     <div className='w-full md:w-1/2 flex items-center justify-center pl-5 md:pl-20  md:px-4'>
     <div className="flex flex-col items-start justify-center gap-4 -mt-[30%] md:mt-0">
@@ -53,6 +83,7 @@ const HomePage = () => {
       <h1 className='text-3xl md:text-4xl text-primary font-extrabold'>Working Around <span className='text-secondary'>You</span></h1>
       </div>
       <div className='bg-[#c1ff72] px-3 py-1 rounded-xl text-lg'>&lsquo;&lsquo;Grow Your Business&rsquo;&rsquo;</div>
+      
        <Button className='rounded-2xl bg-secondary hover:bg-primary shadow-md hover:shadow-lg text-white text-lg p-3 gap-2' >
       <Link href='/workers'>
          Find Gig Workers
@@ -84,7 +115,7 @@ const HomePage = () => {
    </div>
     </div>
     <Partners/>
-     <div className='bg-white md:h-screen w-full mt-[5%]'>
+     <div className='bg-white md:h-screen w-full mt-[5%]' id='about'>
         <div className='flex flex-col md:flex-row  w-full'>
         <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>
@@ -118,7 +149,7 @@ const HomePage = () => {
       </div>
       </div>
      </div>
-     <div className='bg-white py-20 w-full mt-[5%]'>
+     <div className='bg-white py-20 w-full mt-[5%]' >
         <div className='flex flex-col md:flex-row items-center w-full'>
             <div className='flex items-center flex-col gap-6 md:w-1/2 px-5'>
               <Image src='/standout.svg' width={100} height={100} className="w-[50%]"/>
@@ -152,7 +183,7 @@ const HomePage = () => {
 
         </div>
      </div>
-     <div className=" w-full mt-[5%] h-screen">
+     <div className=" w-full mt-[5%] md:h-screen" id='service'>
         <h2 className='text-3xl font-bold text-primary text-center py-5 pb-10'>How It Works</h2>
         <div className='flex flex-col  items-center gap-4 '>
           <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%] -ml-[20%]">
