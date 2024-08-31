@@ -19,7 +19,7 @@ const Aboutpage = () => {
         <div className='block md:hidden'>
                 <Drawer>
           <DrawerTrigger>
-            <Menu/>
+           <Menu className=' cursor-pointer text-secondary font-extrabold text-lg'/>
           </DrawerTrigger>
           <DrawerContent className='h-[40%]'>
             <div className=' flex   gap-4 flex-col px-6'>
@@ -38,7 +38,7 @@ const Aboutpage = () => {
       </div>
      
       </div>
-    <div className='bg-white h-screen w-full mt-[5%]' id='about'>
+    <div className='bg-white h-screen w-full mt-[5%] py-20' id='about'>
         <div className='flex flex-col md:flex-row  w-full'>
         <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>

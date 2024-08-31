@@ -49,7 +49,7 @@ const HomePage = () => {
         <div className='block md:hidden'>
                 <Drawer>
           <DrawerTrigger>
-            <Menu/>
+         <Menu className=' cursor-pointer text-secondary font-extrabold text-lg'/>
           </DrawerTrigger>
           <DrawerContent className='h-[40%]'>
             <div className=' flex   gap-4 flex-col px-6'>
