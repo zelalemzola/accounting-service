@@ -9,7 +9,7 @@ const ServicePage = () => {
   return (
     <>
    <div className='flex items-center justify-between px-6 md:px-10 py-3 fixed  top-0 left-0 w-full bg-white rounded-b-2xl'>
-        <Link href='/' className='text-secondary font-bold '>AA Accounting</Link>
+        <Link href='/' className='text-secondary font-bold '>Ask Financial Solution</Link>
         <div className=' hidden md:flex flex-row items-center gap-6 '>
             <Link href='/'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>Home</Link>
             <Link href='/about'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>About us</Link>
@@ -51,7 +51,7 @@ const ServicePage = () => {
           <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md w-[70%] md:w-[50%] ">
             <h2 className="text-secondary text-lg font-bold"><span className='text-xl font-extrabold'>2. </span>Get Matched:</h2>
             <p className='text-sm'>
-             We’ll connect you with the right professionals—our in-house team or our trained gig workers.
+             We&lsquo;ll connect you with the right professionals—our in-house team or our trained gig workers.
             </p>
         </div>
 

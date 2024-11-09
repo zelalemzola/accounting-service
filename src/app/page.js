@@ -39,7 +39,7 @@ const HomePage = () => {
   return (
     <>
        <div className='flex items-center justify-between px-6 md:px-10 py-3 fixed  top-0 left-0 w-full bg-white rounded-b-2xl'>
-        <Link href='/' className='text-secondary font-bold '>AA Accounting</Link>
+        <Link href='/' className='text-secondary font-bold '>Ask Financial Solution</Link>
         <div className=' hidden md:flex flex-row items-center gap-6 '>
             <Link href='/'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>Home</Link>
             <Link href='/about'  className='hover:bg-secondary hover:text-white  p-2 rounded-xl font-bold'>About us</Link>
@@ -119,7 +119,7 @@ const HomePage = () => {
         <div className='flex flex-col md:flex-row  w-full'>
         <div className='md:w-1/2 px-8 '>
       <h1 className='text-primary text-xl font-bold text-start py-9'>Why Work With Us</h1>
-      <p className='p-3 rounded-2xl border border-secondary shadow-md'>Welcome to [Your Company Name], where traditional accounting meets modern flexibility. We do more than crunch numbers—we create opportunities. Whether you&apos;re looking for expert accounting services or trained gig workers who can step in on demand, we&apos;ve built a model that adapts to your needs. Our mission is to make high-quality financial management accessible, efficient, and perfectly suited to your business.</p>
+      <p className='p-3 rounded-2xl border border-secondary shadow-md'>Welcome to Ask Financial Solution, where traditional accounting meets modern flexibility. We do more than crunch numbers—we create opportunities. Whether you&apos;re looking for expert accounting services or trained gig workers who can step in on demand, we&apos;ve built a model that adapts to your needs. Our mission is to make high-quality financial management accessible, efficient, and perfectly suited to your business.</p>
       </div>
       <div className='md:w-1/2 px-5'>
        <h1 className='text-primary text-xl font-bold pb-9 pt-3'>Our Unique Approach</h1>
@@ -134,7 +134,7 @@ const HomePage = () => {
         <div className="flex flex-col gap-1 p-3 rounded-2xl border border-secondary shadow-md">
             <h2 className="text-secondary text-lg font-bold">Gig Worker Marketplace:</h2>
             <p className='text-sm'>
-               Need short-term help without long-term commitment? We’ve trained a network of gig workers ready to assist with everything from day-to-day bookkeeping to specialized financial projects. Hire them by the hour or for a contract term, with the peace of mind that comes from knowing they’ve been trained by the best.
+               Need short-term help without long-term commitment? We&lsuqo;ve trained a network of gig workers ready to assist with everything from day-to-day bookkeeping to specialized financial projects. Hire them by the hour or for a contract term, with the peace of mind that comes from knowing they’ve been trained by the best.
             </p>
         </div>
 
@@ -160,7 +160,7 @@ const HomePage = () => {
             <div className="flex flex-col gap-1 p-3  shadow-md">
                <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig /> Tailored Solutions</h2>
                <p className='text-sm'>
-                  Every business is different. That’s why we offer both full-service accounting and the ability to hire trained gig workers who fit your exact needs.
+                  Every business is different. That&lsquo;s why we offer both full-service accounting and the ability to hire trained gig workers who fit your exact needs.
                </p>
             </div>
 
@@ -174,7 +174,7 @@ const HomePage = () => {
             <div className="flex flex-col gap-1 p-3  shadow-md">
                <h2 className="text-secondary text-lg font-bold flex items-center gap-2"><CircleCheckBig />Empowering Talent: </h2>
                <p className='text-sm'>
-               We’re not just a company—we’re a community. By training gig workers, we empower them with skills and opportunities, while providing you with access to a flexible, highly skilled workforce.
+               We’re not just a company—we&lsquo;re a community. By training gig workers, we empower them with skills and opportunities, while providing you with access to a flexible, highly skilled workforce.
                </p>
             </div>
 
