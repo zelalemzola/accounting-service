@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Merriweather({ subsets: ["latin"],weight:['300',"400","700","900"] });
 
 export const metadata = {
-  title: "AA Accounting",
-  description: "AA accounting and Gig workers",
+  title: "Ask Financial Solution",
+  description: "Ask Financial Solution and Gig workers",
 };
 
 export default function RootLayout({ children }) {

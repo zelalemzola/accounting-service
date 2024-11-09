@@ -214,7 +214,7 @@ const HomePage = () => {
         <h2 className='text-secondary text-2xl font-bold'>Join Us</h2>
         <div className='flex items-center flex-col md:flex-row'>
         <p className='text-[#4d4d4d] w-full md:w-[70%]'>
-            Why settle for less when you can have accounting that adapts to your needs? At [Your Company Name], we&apos;re redefining what it means to manage your finances. Whether you&apos;re a small business or a growing enterprise, we&apos;re here to support your success.
+            Why settle for less when you can have accounting that adapts to your needs? At Ask Financial Solution, we&apos;re redefining what it means to manage your finances. Whether you&apos;re a small business or a growing enterprise, we&apos;re here to support your success.
         </p>
         <Button className='rounded-md bg-secondary hover:bg-secondary hover:shadow-lg text-white shadow-md mx-auto ' asChild>
       <Link href='/workers' className='py-6 px-6'>
@@ -224,7 +224,7 @@ const HomePage = () => {
         </div>
         <div className='w-full  shadow-md border-2 border-secondary '></div>
         <div className='flex flex-col gap-4'>
-        <h2 className='text-primary text-2xl font-bold'>AA Acounting</h2>
+        <h2 className='text-primary text-2xl font-bold'>Ask Financial Solution</h2>
         <div className='flex gap-4 md:gap-8 flex-wrap text-2xl text-white'>
           <div className='p-2 bg-primary rounded-full'><Instagram size={32} /></div>
           <div className='p-2 bg-primary rounded-full'><Facebook  size={32}/></div>
